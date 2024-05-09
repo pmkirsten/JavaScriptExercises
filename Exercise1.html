@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicio medias</h1>
+    <p>Obtendremos la media de altura de 5 personas y su media de edad</p>
+    <p>Pediremos los datos mediante prompt</p>
+    <div style="border: 1px dashed red; padding: 5px">
+        <h2>Bonus:</h2>
+        <p>Mostrar el número de personas mayores de 18 años y el número de personas mayores a 175 cm.</p>
+    </div>
+
+    <script>
+        var sumAges = 0
+        var sumHeights = 0
+        var counterAges = 0
+        var counterHeights = 0
+
+        for (let i = 0; i < 5; i++) {
+            var age = parseInt(prompt("Introduce la edad:"));
+            var height = parseFloat(prompt("Introduce la altura:"));
+
+            sumAges += age;
+            sumHeights += height;
+
+            if (age > 18) {
+                counterAges++;
+            }
+
+            if (height > 1.75) {
+                counterHeights++
+            }
+        }
+
+        var meanHeight = sumHeights / 5;
+
+        document.write("La edad media es: " + (sumAges / 5) + "<br/>");
+        document.write("La altura media es: " + meanHeight + "<br/>");
+        document.write("El número de personas mayores de 18 años es: " + counterAges + "<br/>");
+        document.write("El número de personas mayores de 1.75 es: " + counterHeights + "<br/>");
+    </script>
+</body>
+
+</html>
